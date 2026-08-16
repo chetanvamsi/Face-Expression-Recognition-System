@@ -5,11 +5,7 @@ A deep learning-based facial expression recognition system that detects and clas
 The system supports both **image-based expression prediction** and **real-time webcam-based facial expression detection**.
 
 ---
-## Demo
 
-The system detects a face using OpenCV and predicts the facial expression using the trained CNN model.
-
-![Real-Time Face Expression Detection](...)
 
 ## Features
 
