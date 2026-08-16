@@ -1,53 +1,74 @@
 # Face Expression Recognition System
 
-A deep learning-based facial expression recognition system that detects and classifies human facial expressions using a Convolutional Neural Network (CNN), TensorFlow, Keras, and OpenCV.
+A deep learning-based facial expression recognition system that uses a Convolutional Neural Network (CNN) to classify human facial expressions from images and real-time webcam input.
 
-The system supports both **image-based expression prediction** and **real-time webcam-based facial expression detection**.
+The system combines **TensorFlow, Keras, OpenCV, and Python** to perform face detection, image preprocessing, facial expression classification, and real-time prediction.
 
 ---
 
+## Project Overview
+
+Facial expression recognition is a computer vision and deep learning task that identifies human emotions from facial features.
+
+This project was developed to build an end-to-end facial expression recognition pipeline covering:
+
+- Dataset preparation
+- Image preprocessing
+- Data augmentation
+- CNN model development
+- Model training
+- Model evaluation
+- Image-based prediction
+- Real-time webcam prediction
+
+The trained model classifies faces into seven expression categories.
+
+---
 
 ## Features
 
 - CNN-based facial expression recognition
-- Classification of 7 different facial expressions
+- Recognition of 7 facial expressions
+- Face detection using OpenCV
 - Image preprocessing and normalization
-- Data augmentation during training
-- Class-weighted training to handle class imbalance
-- Model evaluation using accuracy, precision, recall, and F1-score
+- Data augmentation
+- Class-weighted model training
+- Model evaluation using multiple metrics
 - Confusion matrix generation
-- Image-based facial expression prediction
-- Real-time webcam facial expression detection
-- Confidence score displayed for predictions
-- Modular training, evaluation, prediction, and real-time detection scripts
+- Training accuracy visualization
+- Training loss visualization
+- Image-based expression prediction
+- Real-time webcam expression detection
+- Prediction confidence score
+- Modular Python implementation
 
 ---
 
-## Facial Expressions
+## Facial Expression Classes
 
-The model recognizes the following 7 expressions:
+The model recognizes the following expressions:
 
-| Class | Expression |
-|---|---|
-| 1 | Angry |
-| 2 | Disgust |
-| 3 | Fear |
-| 4 | Happy |
-| 5 | Neutral |
-| 6 | Sad |
-| 7 | Surprise |
+| Expression |
+|------------|
+| Angry |
+| Disgust |
+| Fear |
+| Happy |
+| Neutral |
+| Sad |
+| Surprise |
 
 ---
 
 ## Technologies Used
 
-| Technology | Purpose |
-|---|---|
-| Python | Programming language |
-| TensorFlow | Deep learning framework |
+| Technology | Usage |
+|------------|-------|
+| Python | Programming |
+| TensorFlow | Deep learning |
 | Keras | CNN model development |
-| OpenCV | Face detection and real-time webcam processing |
-| NumPy | Numerical computations |
+| OpenCV | Face detection and webcam processing |
+| NumPy | Numerical operations |
 | Pandas | Data processing |
 | Scikit-learn | Model evaluation |
 | Matplotlib | Visualization |
@@ -55,36 +76,34 @@ The model recognizes the following 7 expressions:
 
 ---
 
-## System Architecture
-
-The overall system works as follows:
+## System Workflow
 
 ```text
-                Input Image / Webcam
-                        |
-                        v
-                Face Detection
-                        |
-                        v
-                  Face Cropping
-                        |
-                        v
-                 Grayscale Image
-                        |
-                        v
-                  Resize 48 x 48
-                        |
-                        v
-                   Normalize
-                        |
-                        v
-                 Data Augmentation
-                        |
-                        v
-                    CNN Model
-                        |
-                        v
-              Expression Prediction
-                        |
-                        v
-       Expression + Confidence Score
+Input Image / Webcam
+        |
+        v
+    Face Detection
+        |
+        v
+    Face Extraction
+        |
+        v
+ Grayscale Conversion
+        |
+        v
+   Resize 48 x 48
+        |
+        v
+    Normalization
+        |
+        v
+       CNN
+        |
+        v
+Feature Extraction
+        |
+        v
+Expression Classification
+        |
+        v
+Expression + Confidence
